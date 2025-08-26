@@ -7,7 +7,6 @@ import bag from "./assets/bag.png";
 import ruble from "./assets/ruble.png";
 import sim from "./assets/sim.png";
 import pocket from "./assets/pocket.png";
-import bolt from "./assets/bolt.png";
 import check from "./assets/check.png";
 import pay from "./assets/pay.png";
 import free from "./assets/free.png";
@@ -24,6 +23,7 @@ import { appSt } from "./style.css";
 import { Gap } from "@alfalab/core-components/gap";
 import { useState } from "react";
 import { ThxLayout } from "./thx/ThxLayout.tsx";
+import { GearSIcon } from "@alfalab/icons-glyph/GearSIcon";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -45,8 +45,8 @@ const products: Array<Product> = [
     isSelected: true,
   },
   {
-    title: "+1 спин в барабане",
-    text: "Больше шансы на 100% кэшбэк",
+    title: "+1 попытка крутить барабан суперкэшбэка",
+    text: "Выше шанс выиграть до 100% в случайной категории",
     image: drums,
     isSelected: true,
   },
@@ -220,17 +220,22 @@ export const App = () => {
           <Gap size={12} />
 
           <div
-            style={{ display: "flex", margin: "0 auto", gap: "8px" }}
+            style={{
+              display: "flex",
+              margin: "0 auto",
+              gap: "8px",
+              alignItems: "center",
+            }}
             onClick={() => {
               setIsOpen(true);
               setIsChanged(true);
             }}
           >
-            <img src={bolt} width="24" height="24" alt="bolt" />
+            <GearSIcon />
             <Typography.Text
               view="primary-large"
               tag="p"
-              color="secondary"
+              color="primary"
               weight="bold"
               className={appSt.productText}
             >
