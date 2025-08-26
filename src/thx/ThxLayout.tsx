@@ -28,11 +28,12 @@ export const ThxLayout = () => {
           defaultMargins={false}
           weight="bold"
         >
-          Сервис пока недоступен
+          Такого вы точно не ожидали
         </Typography.TitleResponsive>
         <Gap size={8} />
         <Typography.Text tag="p" view="primary-medium">
-          Вся команда очень старается, скоро всё заработает!
+          Вы только что поучаствовали в настоящем эксперименте! Сейчас мы
+          тестируем сервис, скоро предложим лучшие условия.
         </Typography.Text>
       </div>
 
